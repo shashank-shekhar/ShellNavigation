@@ -6,6 +6,12 @@
              mc:Ignorable="d"
              x:Class="ShellNavigation.App">
     <Application.Resources>
-        
+        <ResourceDictionary>
+            <Color x:Key="PrimaryBackground">#E7E5DF</Color>
+            <Color x:Key="SecondaryBackground">#D3D0CB</Color>
+            <Color x:Key="DarkAccent">#393E41</Color>
+            <Color x:Key="PrimaryAccent">#44BBA4</Color>
+            <Color x:Key="SecondaryAccent">#E7BB41</Color>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

@@ -5,18 +5,23 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="clr-namespace:ShellNavigation.ViewModels;assembly=ShellNavigation"
              mc:Ignorable="d"
-             x:Class="ShellNavigation.Views.LoginPage">
+             x:Class="ShellNavigation.Views.LoginPage"
+             BackgroundColor="#D3D0CB"
+             d:Shell.PresentationMode="ModalAnimated">
 
     <ContentPage.BindingContext>
         <vm:LoginPageViewModel/>
     </ContentPage.BindingContext>
 
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Kibbles" HorizontalOptions="CenterAndExpand" />
-            <Entry Placeholder="Email" ReturnType="Next" Keyboard="Email"/>
-            <Entry Placeholder="Password" IsPassword="True" ReturnType="Go" ReturnCommand="{Binding LoginCommand}"/>
-            <Button Text="Login" Command="{Binding LoginCommand}"/>
+    <ContentPage.Content >
+        <StackLayout Margin="5" >
+            <Label Text="Kibbles" HorizontalOptions="CenterAndExpand"
+                   FontSize="Header" TextColor="#44BBA4"/>
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <Entry Placeholder="Email" ReturnType="Next" Keyboard="Email"/>
+                <Entry Placeholder="Password" IsPassword="True" ReturnType="Go" ReturnCommand="{Binding LoginCommand}"/>
+                <Button Text="Login" Command="{Binding LoginCommand}" BackgroundColor="#E7BB41" TextColor="#393E41"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

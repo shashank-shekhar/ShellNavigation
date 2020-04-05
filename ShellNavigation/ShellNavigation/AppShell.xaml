@@ -29,8 +29,10 @@
         </ResourceDictionary>
     </Shell.Resources>
 
+    <ShellContent Route="login" ContentTemplate="{DataTemplate local:LoginPage}"/>
+
     <!-- Your Pages -->
-    <TabBar>
+    <TabBar Route="main">
         <Tab Title="Browse" Icon="tab_feed.png">
             <ShellContent ContentTemplate="{DataTemplate local:ItemsPage}" />
         </Tab>

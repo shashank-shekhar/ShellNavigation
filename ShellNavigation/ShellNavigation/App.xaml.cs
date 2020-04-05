@@ -17,8 +17,9 @@ namespace ShellNavigation
 			MainPage = new AppShell();
 		}
 
-		protected override void OnStart()
+		protected override async void OnStart()
 		{
+			//await Shell.Current.GoToAsync("///login");
 		}
 
 		protected override void OnSleep()

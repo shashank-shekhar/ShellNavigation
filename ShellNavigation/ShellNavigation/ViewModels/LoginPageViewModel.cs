@@ -13,6 +13,7 @@ namespace ShellNavigation.ViewModels
 			Title = "Login";
 		}
 
+
 		public string Email
 		{
 			get => _email;
@@ -29,7 +30,7 @@ namespace ShellNavigation.ViewModels
 
 		private async Task LoginAsync()
 		{
-			await Task.FromResult(0);
+			await Shell.Current.GoToAsync("///main");
 		}
 	}
 }
