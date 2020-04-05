@@ -1,8 +1,6 @@
-﻿using System;
+﻿using ShellNavigation.Services;
+using Xamarin.Essentials;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-using ShellNavigation.Services;
-using ShellNavigation.Views;
 
 namespace ShellNavigation
 {
@@ -19,7 +17,15 @@ namespace ShellNavigation
 
 		protected override async void OnStart()
 		{
-			//await Shell.Current.GoToAsync("///login");
+			string value = await SecureStorage.GetAsync("loggedIn");
+			if (value == "1")
+			{
+				await Shell.Current.GoToAsync("///main");
+			}
+			else
+			{
+				await Shell.Current.GoToAsync("///login");
+			}
 		}
 
 		protected override void OnSleep()

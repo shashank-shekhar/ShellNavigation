@@ -18,8 +18,10 @@
             <Label Text="Kibbles" HorizontalOptions="CenterAndExpand"
                    FontSize="Header" TextColor="#44BBA4"/>
             <StackLayout VerticalOptions="CenterAndExpand">
-                <Entry Placeholder="Email" ReturnType="Next" Keyboard="Email"/>
-                <Entry Placeholder="Password" IsPassword="True" ReturnType="Go" ReturnCommand="{Binding LoginCommand}"/>
+                <Label Text="{Binding ValidationError}" FontSize="Small" TextColor="Crimson" HorizontalOptions="Center"/>
+                <Entry Placeholder="Email" ReturnType="Next" Keyboard="Email" Text="{Binding Email}"/>
+                <Entry Placeholder="Password" IsPassword="True" Text="{Binding Password}"
+                       ReturnType="Go" ReturnCommand="{Binding LoginCommand}"/>
                 <Button Text="Login" Command="{Binding LoginCommand}" BackgroundColor="#E7BB41" TextColor="#393E41"/>
             </StackLayout>
         </StackLayout>
